@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,10 @@
 
     <!--  STYLES -->
     <link rel="stylesheet" href="/styles/index.css">
-
+    <link rel="stylesheet" href="/styles/carousel-songs.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,33 +23,38 @@
 
 
 <body>
-    <header>
-        <main class="header">
-            <!-- Profile -->
-            <div class="user-wrapper">
+    <header class="sidebar">
+        <div class="name-project">
+            <h1>My<strong>.Sound</strong></h1>
+        </div>
+        <!-- Profile -->
+        <div class="user-wrapper">
+            <div class="user-content">
                 <img src="https://avatars.githubusercontent.com/u/68311689?v=4" alt="Minha foto">
                 <div class="user">
-                    <h2>Elias</h2>
-                    <h2>Menezes</h2>
+                    <div class="name-profile">
+                        <h2>Elias</h2>
+                        <h2>Menezes</h2>
+                    </div>
                     <div class="user-setting">
-                        <p>Edit profile</p>
+                        <p>Setting</p>
                         <i class="icon-gears"></i>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- List Music -->
-            <div class="styles-music">
-                <h2>Styles</h2>
-                <ul>
-                    <li>Rock</li>
-                    <li>Hip-Hop</li>
-                    <li>Dance</li>
-                    <li>Country</li>
-                </ul>
-            </div>
-        </main>
-        
+        <!-- List Music -->
+        <div class="styles-music">
+            <h2>Styles</h2>
+            <ul>
+                <li>Rock</li>
+                <li>Hip-Hop</li>
+                <li>Dance</li>
+                <li>Country</li>
+            </ul>
+        </div>
+
         <div class="controls">
             <i class="icon-media-prev"></i>
             <i class="icon-media-play"></i>
@@ -55,34 +62,89 @@
         </div>
     </header>
 
-    <main class="body">
+    <main>
         <div class="songs-wrapper">   
-            <a href="#">
-                <h2>Rock</h2>
-            </a>
+            <h2>Rock</h2>
             <div class="songs-content">
-                <a href="#">
-                    Music 1
-                    <img src="/assets/images/rock-1.jpg" alt="Guitarra">
-                </a>
-                <a href="#">
-                    Music 2
-                    <img src="/assets/images/rock-2.jpg" alt="Guitarra">
-                </a>
-                <a href="#">
-                    Music 3
-                    <img src="/assets/images/rock-3.jpg" alt="Guitarra">
-                </a>
+                <div class="songs-slider">
+                    <a href="#" clas="slider">
+                        <img src="/assets/images/rock-1.jpg" alt="Guitarra">
+                        <p>Music 1</p>
+                        <p>Artista1</p>
+                    </a>
+                    <a href="#" clas="slider">
+                        <img src="/assets/images/rock-2.jpg" alt="Guitarra">
+                        <p>Music 2</p>
+                        <p>Artista2</p>
+                    </a>
+                    <a href="#" clas="slider">
+                        <img src="/assets/images/rock-3.jpg" alt="Guitarra">
+                        <p>Music3</p>
+                        <p>Artista3</p>
+                    </a>
+                    <a href="#" clas="slider">
+                        <img src="/assets/images/rock-4.jpg" alt="Guitarra">
+                        <p>Music4</p>
+                        <p>Artista4</p>
+                    </a>
+                    <a href="#" clas="slider">
+                        <img src="/assets/images/rock-5.jpg" alt="Guitarra">
+                        <p>Music5</p>
+                        <p>Artista5</p>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <footer class=play>
-            
+        <div class="artists-wrapper">
+            <div class="artist">
+                <div class="artist-content">
 
+                    <h2>Profile Views</h2>
+                    
+                    <div class="music">
+                        <div id="music-wrapper">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLT-b8kKERCPz8_NTjO0ATyUR7LrA-hQziU1apYZJA=s88-c-k-c0x00ffffff-no-rj" alt="Zac">
+                            <div class="infos-music">
+                                <h3>The Beacon</h3>
+                                <p>Zachariah Hickman</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="music">
+                        <div id="music-wrapper">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLT-b8kKERCPz8_NTjO0ATyUR7LrA-hQziU1apYZJA=s88-c-k-c0x00ffffff-no-rj" alt="Zac">
+                            <div class="infos-music">
+                                <h3>The Beacon</h3>
+                                <p>Zac</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="music">
+                        <div id="music-wrapper">
+                            <img src="https://yt3.ggpht.com/ytc/AKedOLT-b8kKERCPz8_NTjO0ATyUR7LrA-hQziU1apYZJA=s88-c-k-c0x00ffffff-no-rj" alt="Zac">
+                            <div class="infos-music">
+                                <h3>The Beacon</h3>
+                                <p>Zac</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="traks">Tracks</div>
+        </div>
+
+        <footer class=play>
             <div class="info-music-play">
                 <h2>Music 1</h2>
             </div>
         </footer>
     </main>
+
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
