@@ -1,5 +1,7 @@
+
 /* embrulhor de slider */
 .songs-slider{
+    height: 20rem;
     width: 80%;
     padding: 2rem;
     margin: 0 auto;
@@ -32,8 +34,8 @@
 }
 
 .songs-slider img {
-    width: 40rem;
-    height: 25rem;
+    width: 20rem;
+    height: 12rem;
     object-fit: cover;
     border-radius: .5rem;
 

@@ -169,21 +169,22 @@ header.sidebar{
 /***** main ****/
 main {
     width: 80%;
+    height: 100vh;
     text-align: center;
     background: var(--blue);
     background: linear-gradient(90deg, var(--blue) 0%, var(--blue-dark)100%);
 }
 
 .songs-wrapper {
-    height: 50%;
+    height: 40%;
     margin-top: .2rem;
 }
 
 .songs-wrapper h2 {
     text-align: center;
-    font-size: 12rem;
+    font-size: min(5rem, 12rem);
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     text-decoration: underline;
     text-decoration-thickness: from-font;
@@ -192,11 +193,11 @@ main {
 
 /* artist wrapper */
 .artists-wrapper {
-    height: 40%;
+    /* height: 40vh; */
     text-align: left;
     color: var(--white);
 
-    display: flex;
+    display: none;
 }
 
 .artists-wrapper .artist {
