@@ -329,7 +329,7 @@ footer.play{
     background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-dark)100%);
     color: var(--white);
     width: 80%;
-    height: 4rem;
+    height: 3.2rem;
     
     bottom: 0; 
     position: absolute;
