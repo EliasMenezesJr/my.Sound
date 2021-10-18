@@ -37,13 +37,17 @@ nextControl.addEventListener("click",nextControls)
 
 /* volume */
 const volumeUp = document.getElementById('volumeUp')
-volumeUp.addEventListener("click", ()=>{audio.volume+=0.05})
+volumeUp.addEventListener("click", ()=>{
+    audio.volume+=0.1;
+})
 const volumeDown = document.getElementById('volumeDown')
-volumeDown.addEventListener("click", ()=>{audio.volume-=0.05})
+volumeDown.addEventListener("click", ()=>{
+    audio.volume-=0.1;
+})
 
 function autoPlay() {
     playControls();
-    audio.volume=0.3;
+    audio.volume=0.1;
 }
 
 function playControls() {
