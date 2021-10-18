@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ptsvdd');
-  src:  url('fonts/icomoon.eot?ptsvdd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ptsvdd') format('truetype'),
-    url('fonts/icomoon.woff?ptsvdd') format('woff'),
-    url('fonts/icomoon.svg?ptsvdd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?yili2r');
+  src:  url('fonts/icomoon.eot?yili2r#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yili2r') format('truetype'),
+    url('fonts/icomoon.woff?yili2r') format('woff'),
+    url('fonts/icomoon.svg?yili2r#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,11 +28,23 @@
 .icon-user:before {
   content: "\e900";
 }
+.icon-volume:before {
+  content: "\e909";
+}
 .icon-music:before {
   content: "\e901";
 }
 .icon-list-music:before {
   content: "\e902";
+}
+.icon-volume1:before {
+  content: "\e90a";
+}
+.icon-pause:before {
+  content: "\e90b";
+}
+.icon-play:before {
+  content: "\e90c";
 }
 .icon-gears:before {
   content: "\e903";

@@ -1,9 +1,10 @@
 /* embrulhor de slider */
 .songs-slider{
+    height: 20rem;
     width: 80%;
-    padding: 2rem;
-    margin: 0 auto;
 
+    padding: 0 0 5rem 5rem;
+    margin: 0 auto;
     border-radius: 0 5px 5px 0;
     box-shadow: inset 0 -1px var(--blue-dark);
 
@@ -15,6 +16,8 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+
+    overflow-y: hidden;
 }
 
 /* slider */
@@ -31,28 +34,30 @@
     scroll-snap-align: start;
 }
 
-.songs-slider img {
-    width: 40rem;
-    height: 25rem;
-    object-fit: cover;
-    border-radius: .5rem;
+/* ultima img*/
+.songs-slider a:last-child {
+    margin-right: 0;
+}
 
-    border-radius: 0 2rem;
-    box-shadow: 2px 0px 4px var(--silver);
+.songs-slider a img {
+    width: 25rem;
+    height: 95%;
+
+    object-fit: cover;
+    margin-top: .2rem;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px var(--silver), -1px -1px 2px blueviolet;
 
     transition: .1s;
 }
 
-.songs-slider img:hover{
+.songs-slider a img
+
+.songs-slider a img:hover{
     filter: brightness(1.2);
 }
 
-.songs-slider p:nth-child(2){
-    margin-top: 1rem;
-    margin-left: 3rem;
-}
-
-.songs-slider p:nth-child(3){
-    font-size: 1.5rem;
-    margin-left: 3rem;
+.songs-slider a h5,
+.songs-slider a h6 {
+    margin-left: .9rem;
 }

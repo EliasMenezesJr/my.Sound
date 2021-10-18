@@ -26,35 +26,41 @@ body {
 
     overflow: hidden;
     display: flex;
+    background: var(--blue);
 }
 
 header.sidebar{
     width: max(20% ,30rem);
-    height: 100vh;
-    padding: 2rem 3rem;
+    padding: 3rem;
     background: var(--blue-dark);
     color: var(--white);
 
-    z-index: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* name project */ 
-
 .name-project {
     font-family: 'Poppins', sans-serif;
+    width: 90%;
+}
 
-    padding: 2rem;
-    font-size: 1.2rem;
-    margin-bottom: 8.2rem;
+.name-project button {
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    background: none;
 }
 
 .name-project h1{
+    font-size: 2rem;
     text-shadow: 1px 1px 2px var(--dark);
 }
 
 .name-project h1 strong {
+    font-size: 1.8rem;
     color: var(--silver);
     text-decoration: underline;
     text-decoration-thickness: from-font;
@@ -64,42 +70,44 @@ header.sidebar{
 }
 
 /* user */
-
 .user-wrapper {
-    height: 14rem;
-    border-radius: 0 1.5rem;
+    width: 90%;
+    height: 15rem;
+    border-radius: .75rem .75rem 0 0;
     box-shadow: 2px 0px 4px var(--silver);
     padding: 1.9rem 1rem;
     display: flex;
+}
 
-    margin-bottom: 20rem;
+.user-content {
+    justify-content: center;
+    align-items: space-between;
 }
 
 .user-wrapper img {
     display:flex;
     
-    height: 10rem;
-    width: 10rem;
+    height: fit-content;
+    width: 35%;
     border-radius: .7rem;
 }
 
 .user-wrapper .user-content {
-    margin: auto;
     display:flex;
+    align-items: center;
 }
 
 .user-wrapper .user {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: left;
-    padding: .5rem;
     margin-left: .8rem;
 }
 
 .user-wrapper .user h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.5rem;
 }
 
@@ -109,7 +117,7 @@ header.sidebar{
 }
 
 .user-wrapper .user .user-setting p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: .8rem;
 }
 
@@ -119,6 +127,7 @@ header.sidebar{
 
 /* list styles music */
 .styles-music {
+    width: 90%;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -133,7 +142,6 @@ header.sidebar{
     box-shadow: 2px 0px 4px var(--silver);
 
     padding: 3rem;
-    margin-bottom: 17rem;
 }
 
 .styles-music h2 {
@@ -146,24 +154,61 @@ header.sidebar{
 }
 
 .styles-music ul li {
+    filter:brightness(.7);
     transition: .1s;
 }
 
 .styles-music ul li:hover{
+    filter:brightness(1);
     cursor: pointer;
     transform: scale(1.1);
     filter: brightness(1.2);
 }
 
 /** controls **/
-
-.controls{
+.controlsAll audio {
+    visibility: hidden;
+}
+.controlsAll{
+    width: 90%;
     text-align: center;
-    font-size: 4rem;
-
-    padding: 2rem;
-    border-radius: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1.2rem;
+    border-radius: 0 0 .75rem .75rem ;
     box-shadow: 2px 0px 4px var(--silver);
+
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+}
+
+
+.controlsAll .volumes {
+    font-size: 1rem;
+    display: flex;
+}
+
+.controlsAll .volumes i{
+    padding: .5rem;
+    margin: auto;
+}
+
+.controlsAll .controls{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controlsAll i{
+    transition: .1s;
+    filter:brightness(.7);
+}
+
+.controlsAll i:hover {
+    filter:brightness(1);
 }
 
 /***** main ****/
@@ -172,46 +217,64 @@ main {
     text-align: center;
     background: var(--blue);
     background: linear-gradient(90deg, var(--blue) 0%, var(--blue-dark)100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.songs-wrapper {
-    height: 50%;
-    margin-top: .2rem;
+main#main-primary img#img-style-music {
+    width: 10rem;
 }
 
-.songs-wrapper h2 {
-    text-align: center;
-    font-size: 12rem;
+main.main-primary{
+    opacity: 0;
+    transition: 2.5s;
+}
+
+main.main-second{
+    width: 80%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    /* justify-content: center; */
+    
+    position: fixed;
+
+    z-index: 1;
+    transition: 2.5s;
+}
+
+main.main-second div{
     color: var(--white);
-    margin-bottom: 2rem;
+    margin: auto;
+}
 
-    text-decoration: underline;
-    text-decoration-thickness: from-font;
-    text-shadow: 4px 4px 10px var(--back);
+main.main-second div h1{
+    font-size: 5rem;
+}
+
+main.main-second div h1 strong {
+    font-size: 4rem;
 }
 
 /* artist wrapper */
 .artists-wrapper {
-    height: 40%;
+    /* height: 30%; */
     text-align: left;
     color: var(--white);
 
     display: flex;
+    justify-content: inherit;
 }
 
-.artists-wrapper .artist {
-    padding: 2rem 15rem;
-    width: 50%;
-}
-
-.artists-wrapper .artist-content {
-    font-family: 'Open Sans', sans-serif;
-    
-}
+/* .artists-wrapper .artist {
+    margin: 0;
+} */
 
 .artists-wrapper .artist-content h2{
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: .7rem;
     margin-left: .5rem;
     margin-bottom: 1rem;
 }
@@ -219,22 +282,28 @@ main {
 
 #music-wrapper {
     display: flex;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 #music-wrapper img {
-    border-radius: 1rem
+    height: 7rem;
+    width: 7rem;
+    border-radius: .55rem
 }
 
 #music-wrapper .infos-music {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: center;
+    align-items: left;
+    margin-left: .5rem;
+    margin-bottom: .75rem;
 }
 
 #music-wrapper .infos-music h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    transition : .1s;
 }
 
 #music-wrapper .infos-music h3:hover {
@@ -244,7 +313,7 @@ main {
 
 #music-wrapper .infos-music p {
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: var(--silver);
 }
 
@@ -260,14 +329,13 @@ footer.play{
     background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-dark)100%);
     color: var(--white);
     width: 80%;
-    height: 5.5rem;
+    height: 4rem;
     
-    bottom: 0;
-    position: fixed;
+    bottom: 0; 
+    position: absolute;
     display: flex;
 }
 
 footer.play .info-music-play{
     margin: auto;
-    padding: 2rem 0;
 }
