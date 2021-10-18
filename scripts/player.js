@@ -43,7 +43,7 @@ volumeDown.addEventListener("click", ()=>{audio.volume-=0.05})
 
 function autoPlay() {
     playControls();
-    audio.volume=0.01;
+    audio.volume=0.3;
 }
 
 function playControls() {
@@ -58,7 +58,7 @@ function prevControls() {
     newPos = newPos - 1;
     audio.src = window.sounds[numberStyle][newPos].file;
     audio.src = window.sounds[numberStyle][newPos].file;
-    titlePlaying.innerHTML =`${window.sounds[numberStyle][newPos].title}  -  ${window.sounds[numberStyle][newPos].artist}`
+    titlePlaying.innerHTML =`Playing  -  ${window.sounds[numberStyle][newPos].title}  -  ${window.sounds[numberStyle][newPos].artist}`
     autoPlay()
 }
 
@@ -67,11 +67,9 @@ function nextControls() {
     n = n + 1
     console.log(newPos);
     audio.src = window.sounds[numberStyle][newPos].file;
-    titlePlaying.innerHTML =`${window.sounds[numberStyle][newPos].title}  -  ${window.sounds[numberStyle][newPos].artist}`
+    titlePlaying.innerHTML =`Playing  -  ${window.sounds[numberStyle][newPos].title}  -  ${window.sounds[numberStyle][newPos].artist}`
     autoPlay()
 }
-
-
 
 
 const styles = document.querySelectorAll("ul#styles li")
@@ -119,7 +117,7 @@ for(let p = 0; p <styles.length; p++){
                 /* controls*/
                 function addSound(){
                     // audio.src = window.sounds[i].file;
-                    titlePlaying.innerHTML =`${window.sounds[numberStyle][i].title}  -  ${window.sounds[numberStyle][i].artist}`
+                    titlePlaying.innerHTML =`Playing  -  ${window.sounds[numberStyle][i].title}  -  ${window.sounds[numberStyle][i].artist}`
                     audio.src = window.sounds[numberStyle][i].file
                     pos = i
                     autoPlay()

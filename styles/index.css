@@ -339,3 +339,11 @@ footer.play{
 footer.play .info-music-play{
     margin: auto;
 }
+
+footer.play .info-music-play .playing {
+    display: flex;
+}
+
+footer.play .info-music-play .playing h2{
+    padding: .5rem;
+}
