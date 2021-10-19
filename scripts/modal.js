@@ -14,7 +14,7 @@ const loaderFile = function(event){
     reader.readAsDataURL(event.target.files[0])
 }
 
-deleteImage.addEventListener('click', ()=>{
+deleteImage.addEventListener('click', function clear(){
     outPreview.style.display = 'none'
     outPreview.style.backgroundImage = `url("")`
     imageProfileCheck.style.backgroundImage = `url("")`
@@ -27,26 +27,34 @@ const cancelButton = document.querySelector("button#cancel")
 const checkButton = document.querySelector("button#check")
 const settingProfile = document.querySelector(".user-setting")
 const modalWrapper = document.querySelector(".modal-wrapper")
+const clearName = document.querySelector('button.clear')
 
 const nameCheck = document.querySelector('h2#nameCheck')
 const subNameCheck = document.querySelector('h2#subNameCheck')
+
+const inputName = document.querySelector("input#name")
+const inputSubName = document.querySelector("input#subName")
 
 
 settingProfile.addEventListener('click', ()=> {
     modalWrapper.classList.add('active')
 })
 
+clearName.addEventListener('click', ()=> {
+    inputName = " "
+    inputSubName = " "
+    clear()
+})
+
+
 cancelButton.addEventListener('click', ()=>{
     modalWrapper.classList.remove('active')
-    imageProfileCheck.style.backgroundImage = `url("")`
 })
 
 checkButton.addEventListener('click', ()=>{
-    const inputName = document.querySelector("input#name").value
-    const inputSubName = document.querySelector("input#subName").value
-
-    nameCheck.innerText = inputName
-    subNameCheck.innerText = inputSubName
+    
+    nameCheck.innerText = inputName.value
+    subNameCheck.innerText = inputSubName.value
     
     modalWrapper.classList.remove('active')
 })

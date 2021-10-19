@@ -11,6 +11,7 @@ a{
 
 html{
     --blue :rgb(19, 7, 54);
+    --blue-light :rgb(77, 133, 255);
     --blue-dark :rgb(8, 3, 29);
     --back: #040517;
     --white: #e5e5e5e7;
