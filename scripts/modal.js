@@ -38,6 +38,7 @@ settingProfile.addEventListener('click', ()=> {
 
 cancelButton.addEventListener('click', ()=>{
     modalWrapper.classList.remove('active')
+    imageProfileCheck.style.backgroundImage = `url("")`
 })
 
 checkButton.addEventListener('click', ()=>{
