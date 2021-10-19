@@ -84,12 +84,30 @@ header.sidebar{
     align-items: space-between;
 }
 
-.user-wrapper img {
-    display:flex;
-    
+.user-wrapper .image-profile{
     height: fit-content;
     width: 35%;
     border-radius: .7rem;
+    display:flex;
+    
+    position: relative;
+}
+
+.user-wrapper .image-profile #new-profile{
+    height: 100%;
+    width: 100%;
+    border-radius: .7rem;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 2;
+    position: absolute;
+}
+
+.user-wrapper .image-profile img {
+    width: 100%;
+    border-radius: .75rem;
 }
 
 .user-wrapper .user-content {
@@ -114,6 +132,7 @@ header.sidebar{
 .user-wrapper .user .user-setting {
     color: var(--silver);
     display: flex;
+    cursor: pointer;
 }
 
 .user-wrapper .user .user-setting p {
@@ -221,7 +240,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    transition: .3s;
 }
+
 
 main#main-primary img#img-style-music {
     width: 10rem;
@@ -229,7 +251,6 @@ main#main-primary img#img-style-music {
 
 main.main-primary{
     opacity: 0;
-    transition: 2.5s;
 }
 
 main.main-second{
@@ -237,12 +258,10 @@ main.main-second{
     height: 100%;
     right: 0;
     display: flex;
-    /* justify-content: center; */
     
     position: fixed;
 
     z-index: 1;
-    transition: 2.5s;
 }
 
 main.main-second div{
