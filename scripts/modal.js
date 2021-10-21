@@ -56,9 +56,6 @@ checkButton.addEventListener('click', ()=>{
     subNameCheck.innerText = inputSubName.value
     
     modalWrapper.classList.remove('active')
-    if(inputName.value == ""){
-        inputName.value = "Nameee"
-    }
 })
 
 
