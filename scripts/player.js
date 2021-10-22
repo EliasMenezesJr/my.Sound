@@ -3,8 +3,7 @@ const titleCard = document.querySelectorAll("h3#title")
 const artistCard = document.querySelectorAll("p#artist")
 const imgCard = document.querySelectorAll("img#imgCard")
 let pos
-let n = 1
-let numberStyle = 99;
+let isIndex = true;
 
 const buttonIndex = document.querySelector('header .name-project button')
 
@@ -14,7 +13,7 @@ console.log();
 let mainPrimary = document.querySelector("main#main-primary")
 let mainSecond = document.querySelector("main#main-second")
 
-if(numberStyle == 99){
+if(isIndex){
     mainPrimary.classList.add("main-primary")
 }
 
@@ -66,6 +65,7 @@ function prevControls() {
     autoPlay()
 }
 
+let n = 1
 function nextControls() {
     newPos = pos + n;
     n = n + 1
@@ -78,7 +78,6 @@ function nextControls() {
 
 const styles = document.querySelectorAll("ul#styles li")
 
-let isIndex = true;
 buttonIndex.addEventListener('click', ()=>{
     isIndex = true;
     styleSelect()
@@ -94,9 +93,9 @@ for(let p = 0; p <styles.length; p++){
 
         numberStyle = p
         
-        if(numberStyle !=99 && isIndex == false){
+        if(isIndex == false){
             switch(numberStyle){
-                case 0: 
+                case 0:
                 titleStyleMusic.src = './assets/icons/rock.png'
                 break;
                 case 1: 
@@ -113,7 +112,7 @@ for(let p = 0; p <styles.length; p++){
             for( let i = 0; i < titleCard.length; i++){
                 /* cards */
                 titleCard[i].addEventListener("click", addSound)
-                imgCard[i].src = `${window.sounds[numberStyle][i].cover}`
+                imgCard[i].src = `http://lorempixel.com/112/112/sports/${i}`
                 titleCard[i].innerText = `${window.sounds[numberStyle][i].title}`
                 artistCard[i].innerText = `${window.sounds[numberStyle][i].artist}`
             
@@ -128,16 +127,16 @@ for(let p = 0; p <styles.length; p++){
                 }
             }
 
-            mainPrimary.classList.remove("main-primary")
-            mainSecond.style.display = "none"
+            // mainPrimary.style.display = "flex"
+            // mainSecond.style.display = "none"
+            mainPrimary.classList.add("active")
+            mainSecond.classList.remove("active")
         } 
         
         else {
             if(numberStyle == 99 || isIndex == true){
-                mainPrimary.classList.add("main-primary")
-                mainSecond.classList.add("main-second")
-                mainSecond.style.display = "flex"
-                // mainPrimary.style.display = "none"
+                mainPrimary.classList.remove("active")
+                mainSecond.classList.add("active")
             } 
         }
     }

@@ -31,7 +31,7 @@ body {
 }
 
 header.sidebar{
-    width: max(20% ,30rem);
+    width: 20%;
     padding: 3rem;
     background: var(--blue-dark);
     color: var(--white);
@@ -241,8 +241,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
-    transition: .3s;
 }
 
 
@@ -251,18 +249,26 @@ main#main-primary img#img-style-music {
 }
 
 main.main-primary{
+    display: none;
     opacity: 0;
+}
+
+main.main-primary.active {
+    display: flex;
+    opacity: 1;
+    animation: opacity .2s ease-in-out;
 }
 
 main.main-second{
     width: 80%;
     height: 100%;
     right: 0;
-    display: flex;
-    
-    position: fixed;
+    display: none;
+}
 
-    z-index: 1;
+main.main-second.active{
+    display: flex;
+    animation: opacity .2s ease-in-out;
 }
 
 main.main-second div{
