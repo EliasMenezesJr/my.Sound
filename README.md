@@ -11,7 +11,7 @@
 
 <main>
 <h2>
-<h1>Ilustrações</h1>
+<h1>illustrations</h1>
 
 <section>
 <h2>Home</h2>
@@ -40,7 +40,7 @@
   
 #
 <footer align="left">
-<h3> Criador: Elias Menezes Júnior <h3>
+<h3> Creator: Elias Menezes Júnior <h3>
 </footer>
 
 #
